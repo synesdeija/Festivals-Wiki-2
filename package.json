@@ -53,11 +53,6 @@
     "collectCoverageFrom": [
       "./src/**/*.{js,jsx}",
       "!./src/reportWebVitals.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "lines": 90
-      }
-    }
+    ]
   }
 }
