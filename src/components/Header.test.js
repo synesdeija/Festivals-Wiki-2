@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect'
 import Header from './Header'
 
 describe('Header', () => {
@@ -17,7 +17,10 @@ describe('Header', () => {
   it('renders add button when on homepage', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
-        <Header onAdd={() => {}} showAdd={true} />
+        <Header
+          onAdd={() => {}}
+          showAdd={false}
+        />
       </MemoryRouter>
     )
     const buttonElement = screen.getByRole('button', { name: /add/i })
@@ -27,7 +30,10 @@ describe('Header', () => {
   it('renders close button when add form is open', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
-        <Header onAdd={() => {}} showAdd={true} />
+        <Header
+          onAdd={() => {}}
+          showAdd={true}
+        />
       </MemoryRouter>
     )
     const buttonElement = screen.getByRole('button', { name: /close/i })
