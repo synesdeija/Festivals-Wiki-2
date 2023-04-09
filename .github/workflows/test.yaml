@@ -3,7 +3,7 @@ name: Test and Cache Dependencies
 # This action will trigger on every pull request to the main branch
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -20,12 +20,12 @@ jobs:
           node-version: '18'
 
       # Cache dependencies
-      - name: Cache dependencies
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: ${{ runner.os }}-node-
+      # - name: Cache dependencies
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: ${{ runner.os }}-node-
 
       # Install dependencies
       - name: Install dependencies
