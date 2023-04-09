@@ -23,8 +23,9 @@ const AddTask = ({ onAdd }) => {
       className="add-form"
       onSubmit={onSubmit}>
       <div className="form-control">
-        <label>Task</label>
+        <label htmlFor="task-input">Task</label>
         <input
+          id="task-input"
           type="text"
           placeholder="Add Task"
           value={text}
@@ -33,8 +34,9 @@ const AddTask = ({ onAdd }) => {
       </div>
 
       <div className="form-control">
-        <label>Date & Time</label>
+        <label htmlFor="date-input">Date & Time</label>
         <input
+          id="date-input"
           type="day"
           placeholder="Add Date & Time"
           value={day}
@@ -43,8 +45,9 @@ const AddTask = ({ onAdd }) => {
       </div>
 
       <div className="form-control form-control-check">
-        <label>Set Reminder</label>
+        <label htmlFor="reminder-checkbox">Set Reminder</label>
         <input
+          id="reminder-checkbox"
           type="checkbox"
           checked={reminder}
           value={reminder}
