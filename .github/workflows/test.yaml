@@ -29,9 +29,9 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm ci
+        run: |
+          echo "//npm.fontawesome.com/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > .npmrc
+          npm ci
 
       # Run the tests
       - name: Run tests
